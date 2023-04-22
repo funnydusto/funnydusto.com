@@ -10,5 +10,12 @@
     --black: rgba(0, 0, 0, 1);
 
     /* Icons */
-    --fluenticon-keyline: url(../icons/keyline.svg);
+    --fluenticon-keyline: url(../icons/fl_keyline.svg);
+}
+
+body {
+    background: var(--primary-purple);
+    display: flex;
+    margin: 0px;
+    color: var(--white);
 }
