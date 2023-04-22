@@ -1,0 +1,14 @@
+:root {
+    /* Splashes */
+    --backdrop-splash: linear-gradient(180deg, rgba(47, 13, 73, 0.6) 0%, rgba(47, 13, 73, 0.8) 0.01%, #2F0D49 50%), url(../images/hero_splash.jpg);
+
+    /* Primary Palette */
+    --primary-purple: rgba(49, 18, 74, 1);
+
+    /* Component Palette */
+    --white: rgba(255, 255, 255, 1);
+    --black: rgba(0, 0, 0, 1);
+
+    /* Icons */
+    --fluenticon-keyline: url(../icons/keyline.svg);
+}
