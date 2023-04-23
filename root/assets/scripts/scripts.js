@@ -1,2 +1,2 @@
-let headerel = document.getElementById('header');
-headerel.innerText = 'wooo javascript is fun!!';
+let splashheader = document.getElementById('header');
+splashheader.innerText = 'wooo javascript is fun!!';
