@@ -18,3 +18,38 @@
     background-size: auto;
     background-position-y: center;
 }
+
+.tab {
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    margin: 0px 24px 0px 24px;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.tab:hover {
+    background: var(--dark-hover);
+}
+
+.active {
+    background-color: var(--dark-active);
+}
+
+.tag {
+    background: var(--tag-dark-generic-background);
+    color: var(--tag-dark-generic-color);
+    display: flex;
+    width: min-content;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+.tblog {
+    background: var(--tag-dark-blog-background);
+    color: var(--tag-dark-blog-color)
+}

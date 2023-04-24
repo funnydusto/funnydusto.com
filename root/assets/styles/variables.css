@@ -10,6 +10,13 @@
     /* Component Palette */
     --white: rgba(255, 255, 255, 1);
     --black: rgba(0, 0, 0, 1);
+    --dark-hover: rgba(255, 255, 255, 0.2);
+    --dark-active: rgba(255, 255, 255, 0.3);
+
+    --tag-dark-generic-background: rgba(42, 42, 51, 0.8);
+    --tag-dark-generic-color: rgba(240, 243, 255, 1);
+    --tag-dark-blog-background: rgba(9, 40, 12, 0.8);
+    --tag-dark-blog-color: rgba(176, 255, 186, 1);
     
     /* Icons */
     --fluenticon-keyline: url(icons/fl_keyline.svg);

@@ -1,7 +1,7 @@
 nav {
     background: var(--secondary-purple);
     height: calc(100vmin - 48px);
-    width: 25%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     padding: 24px 0px 24px 0px;
@@ -12,16 +12,4 @@ section {
     height: calc(100vmin - 64px);
     width: 75%;
     padding: 32px;
-}
-
-a {
-    color: white;
-    font-style: normal;
-    text-decoration: none;
-    margin: 0px 24px 0px 24px;
-    padding: 12px;
-}
-
-a:hover {
-    background: gray;
 }
