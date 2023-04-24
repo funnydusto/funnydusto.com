@@ -10,6 +10,6 @@ nav {
 section {
     background: var(--backdrop-splash);
     height: calc(100vmin - 64px);
-    width: 75%;
+    width: 80%;
     padding: 32px;
 }
