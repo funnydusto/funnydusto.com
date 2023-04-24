@@ -19,6 +19,14 @@
     background-position-y: center;
 }
 
+.wordmark {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 24px 12px 24px;
+    gap: 12px;
+    align-items: center;
+}
+
 .tab {
     color: white;
     font-style: normal;
@@ -52,4 +60,19 @@
 .tblog {
     background: var(--tag-dark-blog-background);
     color: var(--tag-dark-blog-color)
+}
+
+.tdev {
+    background: var(--tag-dark-dev-background);
+    color: var(--tag-dark-dev-color);
+    height: min-content;
+}
+
+/* temporary */
+.devnotice {
+    background: var(--devnotice-background);
+    color: var(--devnotice-color);
+    display: flex;
+    padding: 12px;
+    border-radius: 50px;
 }
