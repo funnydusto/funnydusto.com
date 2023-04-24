@@ -1,6 +1,6 @@
 nav {
     background: var(--secondary-purple);
-    height: 100cap;
+    height: calc(100vmin - 48px);
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -9,8 +9,9 @@ nav {
 
 section {
     background: var(--backdrop-splash);
-    height: 100vh;
+    height: calc(100vmin - 64px);
     width: 75%;
+    padding: 32px;
 }
 
 a {
@@ -23,12 +24,4 @@ a {
 
 a:hover {
     background: gray;
-}
-
-a::before {
-    content: var(--fluenticon-keyline);
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-right: 12px;
 }

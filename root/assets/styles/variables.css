@@ -1,7 +1,7 @@
 :root {
     /* Splashes */
     --backdrop-splash: linear-gradient(180deg, rgba(47, 13, 73, 0.6) 0%, rgba(47, 13, 73, 0.8) 0.01%, #2F0D49 50%), url(../images/banners/hero_splash.webp);
-    --placeholder-splash-dark-3: linear-gradient(180deg, rgba(12, 51, 44, 0) 0%, #0C332C 54.69%), url(../images/banners/placeholders/placeholder_dark_3.webp);
+    --splash-ph-dark-3: linear-gradient(180deg, rgba(12, 51, 44, 0) 0%, #0C332C 50%), url(../images/banners/placeholders/placeholder_dark_3.webp);
 
     /* Primary Palette */
     --primary-purple: rgba(49, 18, 74, 1);
