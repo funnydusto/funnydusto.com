@@ -2,7 +2,7 @@
     background: var(--splash-ph-dark-3);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position-y: top;
+    background-position: right ce;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

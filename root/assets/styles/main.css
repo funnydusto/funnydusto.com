@@ -7,9 +7,48 @@ nav {
     padding: 24px 0px 24px 0px;
 }
 
+nav > a > p {
+    line-height: 0px;
+}
+
+svg {
+    width: 24px;
+}
+
 section {
     background: var(--backdrop-splash);
     height: calc(100vmin - 64px);
     width: 80%;
     padding: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+    nav {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: min-content;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    nav > a > p {
+        display: none;
+    }
+
+    nav > .wordmark {
+        display: none;
+    }
+
+    nav > .tm {
+        display: none;
+    }
+
+    .tab {
+        flex-direction: column;
+    }
 }
