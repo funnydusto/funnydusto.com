@@ -15,11 +15,21 @@ svg {
     width: 24px;
 }
 
-section {
+.content {
     background: var(--backdrop-splash);
     height: calc(100vmin - 64px);
     width: 80%;
     padding: 32px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 32px;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -32,8 +42,13 @@ section {
         justify-content: center;
     }
 
-    section {
+    .content {
+        height: max-content;
         width: 100%;
+    }
+
+    .card-row {
+        flex-direction: column;
     }
 
     nav > a > p {
