@@ -6,7 +6,11 @@ export default {
 			brand: ['Work Sans', 'Inter', 'sans-serif'],
 			sans: ['Inter', 'sans-serif'],
 		},
-		extend: {},
+		extend: {
+			backgroundImage: {
+				'hero-cover': "url(/cover.png)"
+			}
+		},
 	},
 	plugins: [],
 }
