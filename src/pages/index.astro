@@ -12,7 +12,7 @@ import { Connections } from "../data/data.ts"
     
     <!-- Hero -->
     <div class="flex flex-col w-full max-w-5xl gap-3">
-        <div class="w-full h-24 bg-center bg-cover bg-hero-cover border-b-2 border-zinc-600"></div>
+        <div class="w-full h-24 bg-center bg-cover border-b-2 bg-hero-cover border-zinc-600"></div>
         <Heading heading="funnydusto" subheading="dustin coia"/>
         <p class="font-sans text-base text-zinc-50">ui/ux & visual design & digital illustration</p>
     </div>
@@ -21,27 +21,35 @@ import { Connections } from "../data/data.ts"
     <Alert heading="let's work together">
         <div class="font-sans text-base text-zinc-200"><p>on your next idea, aspiration, or project. just <a class="underline underline-offset-2" href="mailto:funnydustobusiness@gmail.com?subject=Let's%20work%20together&body=What's%20your%20cool%20idea?">hit me up</a>.</p></div>
     </Alert>
-
-    <Item>
-        {
-            Connections.map(data =>(
-                <div>
-                    <a class="text-2xl text-zinc-100 leading-6 font-brand underline underline-offset-2" href={data.url}>{data.label}</a>
-                    <p class="">{data.subLabel}</p>
-                </div>
-            ))
-        }   
-    </Item>
-
-    <Item>
-        {
-            Projects.map(data =>(
-                <div>
-                    <a class="text-2xl text-zinc-100 leading-6 font-brand underline underline-offset-2" href={data.url}>{data.label}</a>
-                    <p class="">{data.subLabel}</p>
-                </div>
-                <p>{data.description}</p>
-            ))
-        }   
-    </Item>
+    
+    <div class="flex flex-wrap w-full max-w-5xl gap-9">
+        <div class="flex flex-col gap-3 max-2xl:w-full md:min-w-96">
+            <Heading heading="creating" subheading=""/>
+            <Item>
+                {
+                    Projects.map(data =>(
+                        <div class="flex w-full">
+                            <a class="flex-1 text-2xl leading-6 underline text-zinc-100 font-brand underline-offset-2" href={data.url}>{data.label}</a>
+                            <p class="text-base text-zinc-400">{data.subLabel}</p>
+                        </div>
+                        <p class="pb-3 text-base border-b-2 text-zinc-200 border-zinc-600 last:border-b-0">{data.description}</p>
+                    ))
+                }   
+            </Item>
+        </div>
+        
+        <div class="flex flex-col gap-3 max-2xl:w-full md:min-w-96">
+            <Heading heading="connect" subheading=""/>
+            <Item>
+                {
+                    Connections.map(data =>(
+                        <div class="flex w-full pb-3 border-b-2 last:border-b-0 border-zinc-600">
+                            <a class="flex-1 text-2xl leading-6 underline text-zinc-100 font-brand underline-offset-2" href={data.url}>{data.label}</a>
+                            <p class="text-base text-zinc-400 border-zinc-600 last:border-b-0">{data.subLabel}</p>
+                        </div>
+                    ))
+                }   
+            </Item>
+        </div>
+    </div>
 </Layout>
