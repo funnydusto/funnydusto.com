@@ -11,12 +11,12 @@ const Projects = [
         description:"participating in this year's buildspace",
         url:"https://buildspace.so"
     },
-    {
-        label:"view more",
-        subLabel:"portfolio",
-        description:"check out commissioned work, small projects, and random doodles",
-        url:"/portfolio"
-    },
+    // {
+    //     label:"view more",
+    //     subLabel:"portfolio",
+    //     description:"check out commissioned work, small projects, and random doodles",
+    //     url:"/portfolio"
+    // },
 ]
 
 const Connections = [
