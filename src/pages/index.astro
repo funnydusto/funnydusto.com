@@ -6,6 +6,7 @@ import Item from '../components/Item.astro';
 
 import { Projects } from "../data/data.ts"
 import { Connections } from "../data/data.ts"
+import { Skills } from "../data/data.ts"
 ---
 
 <Layout title="funnydusto.com" description="let's describe something." image="/seo/image_a.png">
@@ -45,6 +46,20 @@ import { Connections } from "../data/data.ts"
                     Connections.map(data =>(
                         <div class="flex w-full pb-3 border-b-2 last:border-b-0 border-zinc-600">
                             <a class="flex-1 text-2xl leading-6 underline text-zinc-100 font-brand underline-offset-2" href={data.url}>{data.label}</a>
+                            <p class="text-base text-zinc-400 border-zinc-600 last:border-b-0">{data.subLabel}</p>
+                        </div>
+                    ))
+                }   
+            </Item>
+        </div>
+
+        <div class="flex flex-col gap-3 max-2xl:w-full md:min-w-96">
+            <Heading heading="connect" subheading=""/>
+            <Item>
+                {
+                    Skills.map(data =>(
+                        <div class="flex w-full pb-3 border-b-2 last:border-b-0 border-zinc-600">
+                            <p class="flex-1 text-2xl leading-6 text-zinc-100 font-brand">{data.label}</p>
                             <p class="text-base text-zinc-400 border-zinc-600 last:border-b-0">{data.subLabel}</p>
                         </div>
                     ))

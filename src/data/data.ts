@@ -46,7 +46,32 @@ const Skills = [
         label:"framer",
         subLabel:"intermediate"
     },
+    {
+        label:"adobe suite",
+        subLabel:"intermediate"
+    },
+    {
+        label:"html/css",
+        subLabel:"intermediate"
+    },
+    {
+        label:"microsoft 365 suite",
+        subLabel:"intermediate"
+    },
+    {
+        label:"astro",
+        subLabel:"beginner"
+    },
+    {
+        label:"fable",
+        subLabel:"beginner"
+    },
+    {
+        label:"tailwind",
+        subLabel:"beginner"
+    },
 ]
 
 export { Projects };
 export { Connections };
+export { Skills };
