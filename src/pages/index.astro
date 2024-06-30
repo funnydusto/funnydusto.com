@@ -1,8 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Alert from '../components/Alert.astro';
-import Heading from "../components/Heading.astro";
-import Item from '../components/Item.astro';
+import Layout from '../layouts/Layout.astro'
+import Widget11 from '../components/Widget11.astro'
+import Widget21 from "../components/Widget21.astro"
 
 import { Projects } from "../data/data.ts"
 import { Connections } from "../data/data.ts"
@@ -12,59 +11,14 @@ import { Skills } from "../data/data.ts"
 <Layout title="funnydusto.com" description="let's describe something." image="/seo/image_a.png">
     
     <!-- Hero -->
-    <div class="flex flex-col w-full max-w-5xl gap-3">
-        <div class="w-full h-24 bg-center bg-cover border-b-2 bg-hero-cover border-zinc-600"></div>
-        <Heading heading="funnydusto" subheading="dustin coia"/>
-        <p class="font-sans text-base text-zinc-50">ui/ux & visual design & digital illustration</p>
-    </div>
-    
-    <!-- Alert (comment out to disable) -->
-    <Alert heading="let's work together">
-        <div class="font-sans text-base text-zinc-200"><p>on your next idea, aspiration, or project. just <a class="underline underline-offset-2" href="mailto:funnydustobusiness@gmail.com?subject=Let's%20work%20together&body=What's%20your%20cool%20idea?">hit me up</a>.</p></div>
-    </Alert>
-    
-    <div class="flex flex-wrap w-full max-w-5xl gap-9">
-        <div class="flex flex-col gap-3 max-2xl:w-full md:min-w-96">
-            <Heading heading="creating" subheading=""/>
-            <Item>
-                {
-                    Projects.map(data =>(
-                        <div class="flex w-full">
-                            <a class="flex-1 text-2xl leading-6 underline text-zinc-100 font-brand underline-offset-2" href={data.url}>{data.label}</a>
-                            <p class="text-base text-zinc-400">{data.subLabel}</p>
-                        </div>
-                        <p class="pb-3 text-base border-b-2 text-zinc-200 border-zinc-600 last:border-b-0">{data.description}</p>
-                    ))
-                }   
-            </Item>
-        </div>
-        
-        <div class="flex flex-col gap-3 max-2xl:w-full md:min-w-96">
-            <Heading heading="connect" subheading=""/>
-            <Item>
-                {
-                    Connections.map(data =>(
-                        <div class="flex w-full pb-3 border-b-2 last:border-b-0 border-zinc-600">
-                            <a class="flex-1 text-2xl leading-6 underline text-zinc-100 font-brand underline-offset-2" href={data.url}>{data.label}</a>
-                            <p class="text-base text-zinc-400 border-zinc-600 last:border-b-0">{data.subLabel}</p>
-                        </div>
-                    ))
-                }   
-            </Item>
-        </div>
+    <header>
+        <div class="bg-profile-picture size-8"/>
+    </header>
 
-        <div class="flex flex-col gap-3 max-2xl:w-full md:min-w-96">
-            <Heading heading="connect" subheading=""/>
-            <Item>
-                {
-                    Skills.map(data =>(
-                        <div class="flex w-full pb-3 border-b-2 last:border-b-0 border-zinc-600">
-                            <p class="flex-1 text-2xl leading-6 text-zinc-100 font-brand">{data.label}</p>
-                            <p class="text-base text-zinc-400 border-zinc-600 last:border-b-0">{data.subLabel}</p>
-                        </div>
-                    ))
-                }   
-            </Item>
-        </div>
-    </div>
+    <!-- Card Grid -->
+    <section class="grid grid-cols-2 gap-4">
+        <Widget11 src="profile.png"/>
+        <Widget11 src="profile.png"/>
+        <Widget21 src="cover.png"/>
+    </section>
 </Layout>

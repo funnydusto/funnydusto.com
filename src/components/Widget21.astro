@@ -1,0 +1,9 @@
+---
+interface Props {
+    src: string;
+    alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+<img src={src} alt={alt} class="aspect-video fill-slate-400 col-span-2 rounded-2xl "/>
