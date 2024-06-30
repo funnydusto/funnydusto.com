@@ -8,7 +8,8 @@ export default {
 		},
 		extend: {
 			backgroundImage: {
-				'hero-cover': "url(/cover.png)"
+				'hero-cover': "url(/cover.png)",
+				'profile-picture': "url(/profile.png)"
 			}
 		},
 	},
