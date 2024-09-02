@@ -8,9 +8,10 @@ export default {
 		},
 		extend: {
 			backgroundImage: {
-				'hero-cover': "url(/cover.png)",
-				'profile-picture': "url(/profile.png)"
+				'profile-picture': "url(/profile.png)",
+				'hero-splash': "linear-gradient(#27163D00, #27163D), url(/splash.png)",
 			}
+			
 		},
 	},
 	plugins: [],

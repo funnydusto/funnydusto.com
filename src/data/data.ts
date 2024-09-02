@@ -1,22 +1,28 @@
 const Projects = [
+//  {
+//      label: string,
+//      cover: string,
+//      subLabel: string,
+//      description: string,
+//      url: string,
+//      recent: boolean;
+//  }
     {
-        label:"chibeeu",
+        label:"outfits.bio Marketing Stunt",
+        cover:"/covers/obmkg.png",
         subLabel:"founder",
         description:"adorable chibi avatar on the web",
-        url:"https://chibeeu.com"
+        url:"/work/outfits-bio-marketing-stunt",
+        recent:true,
     },
     {
-        label:"buildspace",
-        subLabel:"n&ws s5",
-        description:"participating in this year's buildspace",
-        url:"https://buildspace.so"
-    },
-    // {
-    //     label:"view more",
-    //     subLabel:"portfolio",
-    //     description:"check out commissioned work, small projects, and random doodles",
-    //     url:"/portfolio"
-    // },
+        label:"Nexion Labs Brand",
+        cover:"/covers/nlbrd.png",
+        subLabel:"",
+        description:"",
+        url:"/work/nexion-labs-branding",
+        recent: true,
+    }
 ]
 
 const Connections = [
