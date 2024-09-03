@@ -2,16 +2,16 @@
 interface Props {
 	title: string;
 	description: string;
-	image: string;
+	image: string | undefined;
 }
 
 const { title, description, image } = Astro.props;
 
-let imagePlaceholder = image;
+// let imagePlaceholder = image;
 
-if (image.length == 0){
-imagePlaceholder = "/seo/image_b.png"
-};
+// if (image.length == 0){
+// imagePlaceholder = "/seo/image_b.png"
+// };
 
 import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
@@ -39,7 +39,7 @@ const projects = await getCollection('projects');
         <meta property="og:type" content="website">
         <meta property="og:title" content="funnydusto">
         <meta property="og:description" content={description}>
-        <meta property="og:image" content={imagePlaceholder}>
+        <meta property="og:image" content={image}>
 
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image">
@@ -47,7 +47,7 @@ const projects = await getCollection('projects');
 		<meta property="twitter:url" content={Astro.url}>
 		<meta name="twitter:title" content="funnydusto">
 		<meta name="twitter:description" content={description}>
-		<meta name="twitter:image" content={imagePlaceholder}>
+		<meta name="twitter:image" content={image}>
 		<meta name="twitter:site" content="@funnydusto">
 
 		<!-- Search-Engine Specific SEO -->
