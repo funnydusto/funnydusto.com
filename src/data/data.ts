@@ -8,21 +8,29 @@ const Projects = [
 //      recent: boolean;
 //  }
     {
-        label:"outfits.bio Marketing Stunt",
-        cover:"/covers/obmkg.png",
+        label:"outfits.bio Campaign",
+        cover:"./src/pages/work/covers/obmkg.png",
         subLabel:"founder",
         description:"adorable chibi avatar on the web",
-        url:"/work/outfits-bio-marketing-stunt",
+        url:"/work/outfits-bio-marketing-campaign",
         recent:true,
     },
     {
         label:"Nexion Labs Brand",
-        cover:"/covers/nlbrd.png",
+        cover:"./src/pages/work/covers/nlbrd.png",
         subLabel:"",
         description:"",
         url:"/work/nexion-labs-branding",
         recent: true,
-    }
+    },
+    {
+        label:"Xena",
+        cover:"/splash.png",
+        subLabel:"",
+        description:"",
+        url:"/work/xena-branding",
+        recent: true,
+    },
 ]
 
 const Connections = [
