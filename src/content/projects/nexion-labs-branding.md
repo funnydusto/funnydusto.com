@@ -1,7 +1,9 @@
 ---
 title: Nexion Labs Branding
+description: ee
 slug: nexion-labs-branding
-image: ./src/pages/projects/covers/nlbrd.png
+image: ./covers/nexion-labs-branding.png
+accentColor: 01010A
 isFeatured: true
 ---
 

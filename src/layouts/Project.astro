@@ -13,8 +13,10 @@ const { title, description, image } = Astro.props;
 // imagePlaceholder = "/seo/image_b.png"
 // };
 
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
+console.log("Coming from Project.astro: " + image)
 ---
 
 <!doctype html>
@@ -56,10 +58,10 @@ const projects = await getCollection('projects');
 		<meta name="googlebot" content="notranslate">
 
 	</head>
-	<body class="flex flex-col bg-[#27163D] text-white">
-        
+	<body class="flex flex-col m-6 bg-[#27163D] text-white">
+        <h1>{title}</h1>
 		<article>
-            <img src={image}>
+            <Image class="w-full" src={image} alt="hello"/>
             <slot />
         </article>
 	</body>

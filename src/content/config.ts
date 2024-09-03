@@ -1,5 +1,6 @@
 // 1. Import utilities from `astro:content`
 import { z, defineCollection } from 'astro:content';
+import { type SchemaContext } from "astro:content";
 
 // 2. Define a `type` and `schema` for each collection
 const blogCollection = defineCollection({
@@ -13,9 +14,14 @@ const blogCollection = defineCollection({
 
 const projects = defineCollection({
     type: 'content',
-    schema: z.object({
+    schema: ({ image }) => z.object({
         title: z.string(),
-        image: z.string().optional(),
+        description: z.string(),
+        // image: z.string(),
+        image: image().refine((img) => img.width >= 1080, {
+          message: "Cover image must be at least 1080 pixels wide!",
+        }),
+        accentColor: z.string().optional(),
         isFeatured: z.boolean(),
     })
 })

@@ -1,7 +1,9 @@
 ---
 title: outfits.bio Marketing Campaign
+description: e
 slug: outfitsbio-marketing-campaign
-image: ./src/pages/projects/covers/obmkg.png
+image: ./covers/outfitsbio-marketing-campaign.png
+accentColor: FF6200
 isFeatured: true
 ---
 
@@ -17,4 +19,4 @@ And here is an image:
 * It signals this cool piece of work that'll be documented on in the future
 * It also shows my stupid dedication towards building this damned site
 * (I'll be crying once I see this function properly)
-![This is an alt text.](/src/pages/projects/covers/obmkg.png)
+![This is an alt text.](/src/content/projects/covers/outfitsbio-marketing-campaign.png)
