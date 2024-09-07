@@ -14,7 +14,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 export const prerender = true;
 ---
-<Layout title={entry.data.title} description={entry.data.title} image={entry.data.image.src}>
+<Layout title={entry.data.title} description={entry.data.title} cover={entry.data.cover.src} seoCover={entry.data.seoCover.src} accentColor={entry.data.accentColor}>
     <Prose>
         <Content />
     </Prose>

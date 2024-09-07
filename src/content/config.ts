@@ -17,11 +17,13 @@ const projects = defineCollection({
     schema: ({ image }) => z.object({
         title: z.string(),
         description: z.string(),
-        // image: z.string(),
-        image: image().refine((img) => img.width >= 1080, {
+        cover: image().refine((img) => img.width >= 1080, {
           message: "Cover image must be at least 1080 pixels wide!",
         }),
-        accentColor: z.string().optional(),
+        seoCover: image().refine((img) => img.width >= 1080, {
+          message: "Cover image must be at least 1080 pixels wide!",
+        }),
+        accentColor: z.string(),
         isFeatured: z.boolean(),
     })
 })
