@@ -1,0 +1,22 @@
+---
+interface Props {
+    label: string | 'funnydusto.com';
+    leftIcon: string | '';
+    rightIcon: string | '';
+    leftHref: string | '';
+    rightHref: string | '';
+}
+
+const { label, leftIcon, rightIcon, leftHref, rightHref } = Astro.props;
+import { Icon } from 'astro-icon/components';
+---
+
+<nav>
+    <a href={leftHref}>
+        <Icon name={leftIcon} class="size-6"/>
+    </a>
+    <p class="font-brand">{label}</p>
+    <a href={rightHref}>
+        <Icon name={rightIcon} class="size-6"/>
+    </a>
+</nav>
