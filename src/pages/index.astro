@@ -2,28 +2,53 @@
 import Layout from '../layouts/Layout.astro'
 import Navbar from '../components/Navbar.astro';
 import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
 const projectsCollection = await getCollection('projects', ({ data }) => { return data.isFeatured === true; });
+const commentaryCollection = await getCollection('blog', ({ data }) => { return data.isFeatured === true; })
 ---
-
 <Layout title="funnydusto.com" description="let's describe something." image="/seo/image_a.png">
     
-    <!-- Navigation -->
-    <Navbar label='funnydusto.com' leftIcon='arrow-previous' leftHref='' rightIcon='menu' rightHref=''/>
+    {/* Navigation */}
+    <Navbar label='funnydusto.com' leftActionEnabled leftHref='' rightActionEnabled/>
 
-    <!-- Hero -->
-    <header class="flex justify-end flex-col font-brand h-[60vh] bg-hero-splash bg-cover bg-center px-6 py-8">
+    {/* Header */}
+    <header class="flex justify-end flex-col font-brand leading-8 h-[60vh] bg-hero-splash bg-cover bg-center px-6 py-8">
         <h1 class="font-light text-[2rem]">Heya, I'm Dustin Coia, or funnydusto.</h1>
     </header>
 
-    <!-- Section A -->
-    <section class="flex flex-col gap-6 px-6 py-6 md:flex-row">
+    {/* Recent Projects */}
+    <section class="flex flex-col gap-6 px-6 py-6">
+        <div class="flex font-light items-center font-brand text-[32px] leading-8">
+            <h2 class="flex-1 underline underline-offset-4 decoration-2">Recent Projects</h2>
+            <a href="projects" class="hover:bg-[#ffffff25] p-2 -m-1 rounded-full"><Icon name="arrow-next" class="size-6"/></a>
+        </div>
+        <div class="flex flex-col gap-6 md:flex-row">
         {projectsCollection.map(entry => (
-            <a href={`/projects/${entry.slug}`} style={`background-image: linear-gradient(#${entry.data.accentColor}00 50%, #${entry.data.accentColor}80), url(${entry.data.image.src})`} class={`relative flex flex-col p-4 overflow-hidden w-full md:w-auto md:h-48 aspect-video bg-cover justify-end outline outline-1 outline-[#00000024] -outline-offset-1 rounded-[16px]`}>
+            <a href={`/projects/${entry.slug}`} style={`background-image: linear-gradient(#${entry.data.accentColor}50 50%, #${entry.data.accentColor}80), url(${entry.data.cover.src})`} class={`relative flex flex-col p-4 overflow-hidden w-full md:w-auto md:h-48 aspect-video bg-cover justify-end outline outline-1 outline-[#00000024] -outline-offset-1 rounded-[16px]`}>
                 <p class="text-xl z-[1]">{entry.data.title}</p>
                 <div class="z-[1] p-[1px] select-none absolute top-[1px] left-[1px] right-[1px] bottom-[1px] rounded-[15px] outline outline-1 outline-[#ffffff24] -outline-offset-1">
                 </div>
-                <img src={entry.data.image.src} class="absolute top-0 left-0 -z-[0] transition-all hover:-translate-y-1 hover:translate-x-1 hover:scale-110 hover:blur"/>
+                {/* <img src={entry.data.cover.src} class="absolute top-0 left-0 -z-[0] transition-all hover:-translate-y-1 hover:translate-x-1 hover:scale-110 hover:blur"/> */}
             </a>
         ))}
+        </div>
+    </section>
+
+    {/* My Commentary */}
+    <section class="flex flex-col gap-6 px-6 py-6">
+        <div class="flex font-light items-center font-brand text-[32px] leading-8">
+            <h2 class="flex-1 underline underline-offset-4 decoration-2">My Commentary</h2>
+            <a href="projects" class="hover:bg-[#ffffff25] p-2 -m-1 rounded-full"><Icon name="arrow-next" class="size-6"/></a>
+        </div>
+        <div class="flex gap-6 overflow-x-scroll -mr-4 md:flex-row">
+            {commentaryCollection.map(entry => (
+                <a href={`/blog/${entry.slug}`} style={`background-image: linear-gradient(#${entry.data.accentColor}50 50%, #${entry.data.accentColor}80), url(${entry.data.coverPortrait.src})`} class={`relative flex flex-col p-4 overflow-hidden min-w-[198px] w-fit h-[352px] aspect-[9/16] bg-cover justify-end outline outline-1 outline-[#00000024] -outline-offset-1 rounded-[16px]`}>
+                    <p class="text-xl z-[1] text-balance">{entry.data.title}</p>
+                    <div class="z-[1] p-[1px] select-none absolute top-[1px] left-[1px] right-[1px] bottom-[1px] rounded-[15px] outline outline-1 outline-[#ffffff24] -outline-offset-1">
+                    </div>
+                    {/* <img src={entry.data.cover.src} class="absolute top-0 left-0 -z-[0] transition-all hover:-translate-y-1 hover:translate-x-1 hover:scale-110 hover:blur"/> */}
+                </a>
+            ))}
+        </div>
     </section>
 </Layout>
